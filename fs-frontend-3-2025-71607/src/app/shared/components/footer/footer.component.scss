@@ -1,0 +1,25 @@
+  .bg-blue {
+    background-color: #0066ae
+  }
+  .text-blue {
+    color: rgb(182, 204, 248);
+  }
+/* .btn-primary sınıfını özelleştirir */
+.btn-primary {
+  background-color: #0056a3;
+
+  color: #fff; /* Metin rengi */
+  border: 1px solid white; /* Kenarlık rengi */
+  padding: 10px 20px; /* İç boşluk */
+  font-size: 1em; /* Yazı boyutu */
+  border-radius: 5px; /* Kenarlık yuvarlaklığı */
+  transition: background-color 0.3s, border-color 0.3s; /* Geçiş efektleri */
+}
+
+/* Hover durumunda stil değişiklikleri */
+.btn-primary:hover {
+
+  background-color: #ecf0f3;/* Hover arka plan rengi */
+  border-color: #0056a3;/* Hover kenarlık rengi */
+  color: #0056a3;/* Hover metin rengi */
+}

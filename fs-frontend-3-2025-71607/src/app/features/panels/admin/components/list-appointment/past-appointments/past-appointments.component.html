@@ -1,0 +1,108 @@
+<div class="d-flex">
+  <app-admin-sidebar></app-admin-sidebar>
+  <div class="flex-grow-1 p-3">
+    <div class="col-md-12">
+      <app-token></app-token>
+      <div class="card mt-5">
+        <div class="card-header">
+          <h2
+            style="
+              color: #1565c0;
+              font-size: 28px;
+              text-align: center;
+              margin-bottom: 19px;
+            "
+          >
+            GEÇMİŞ RANDEVULAR
+          </h2>
+        </div>
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex align-items-center">
+              <div class="input-group mr-3">
+                <span class="input-group-text">
+                  <i class="bi bi-search"></i>
+                </span>
+                <input
+                  type="text"
+                  [(ngModel)]="filterText"
+                  class="form-control"
+                  id="filterText"
+                  placeholder="Hasta kimlik numarası"
+                />
+              </div>
+            </div>
+            <div class="d-flex justify-content-end mb-3">
+              <button
+                class="btn btn-success"
+                [routerLink]="['/add-appointment']"
+              >
+                Randevu Oluştur
+              </button>
+            </div>
+          </div>
+
+          <table class="table table-striped">
+            <thead class="thead-primary">
+              <tr>
+                <th scope="col" style="width: 15%">Doktor Adı Soyadı</th>
+                <th scope="col" style="width: 15%">Hasta Adı Soyadı</th>
+                <th scope="col" style="width: 10%">Hasta Kimlik Numarası</th>
+                <th scope="col" style="width: 12%">Randevu Tarihi</th>
+                <th scope="col" style="width: 12%">Randevu Saati</th>
+                <th scope="col" style="width: 10%">Durum</th>
+                <th scope="col" style="width: 30%">Rapor İşlemleri</th>
+                <th scope="col" style="width: 5%">Sil</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="
+                  let appointment of pastAppointments
+                    | filterAppointmentIdentity : filterText
+                "
+              >
+                <td>
+                  {{ appointment.doctorFirstName }}
+                  {{ appointment.doctorLastName }}
+                </td>
+                <td>
+                  {{ appointment.patientFirstName }}
+                  {{ appointment.patientLastName }}
+                </td>
+                <td>{{ appointment.patientNationalIdentity }}</td>
+                <td>{{ appointment.date | date : "dd.MM.yyyy" }}</td>
+                <td>{{ appointment.time }}</td>
+                <td>Tamamlandı</td>
+                <td>
+                  <div class="d-flex justify-content-around">
+                    <button
+                      class="btn btn-primary btn-sm"
+                      (click)="viewReport(appointment.id)"
+                    >
+                      Raporu Görüntüle
+                    </button>
+                    <button
+                      class="btn btn-success btn-sm"
+                      (click)="addReport(appointment.id)"
+                    >
+                      Rapor Ekle
+                    </button>
+                  </div>
+                </td>
+                <td class="text-center">
+                  <button
+                    class="btn btn-sm btn-danger"
+                    (click)="confirmDelete(appointment.id)"
+                  >
+                    <i class="fa fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<div class="d-flex">
+  <app-patient-sidebar></app-patient-sidebar>
+  <div class="flex-grow-1 p-3">
+    <div class="col-md-12">
+      <app-token></app-token>
+      <div class="card mt-5">
+        <div class="flex-grow-1 p-3">
+          <div class="content">
+            <div class="col-md-12">
+              <div class="card">
+                <div
+                  class="card-header d-flex justify-content-between align-items-center"
+                >
+                  <h5>Rapor Detayı</h5>
+                  <button
+                    class="btn btn-danger btn-sm"
+                    [routerLink]="['/patient-reports']"
+                  >
+                    X
+                  </button>
+                </div>
+                <div class="card-body">
+                  <form [formGroup]="reportForm">
+                    <div class="mb-3">
+                      <label for="name">Adı Soyadı</label>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          id="name"
+                          class="form-control"
+                          formControlName="name"
+                          readonly
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="tcNo">Tc No</label>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          id="tcNo"
+                          class="form-control"
+                          formControlName="tcNo"
+                          readonly
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="reportText" class="form-label"></label>
+                      <div class="form-group">
+                        <textarea
+                          class="form-control"
+                          id="reportText"
+                          rows="8"
+                          type="text"
+                          formControlName="reportText"
+                          readonly
+                        ></textarea>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

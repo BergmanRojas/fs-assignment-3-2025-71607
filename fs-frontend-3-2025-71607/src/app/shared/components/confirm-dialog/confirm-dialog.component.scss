@@ -1,0 +1,33 @@
+.custom-dialog-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1976d2; /* Mavi renk */
+    text-align: center; /* Ortala */
+  }
+  
+  .custom-dialog-content {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0 5px 0; /* Üst ve alt boşlukları azalt */
+    text-align: center; /* İçeriği ortala */
+  }
+  
+  .custom-dialog-actions {
+    display: flex;
+    justify-content: center; /* Butonları ortala */
+    margin-top: 10px; /* Butonlar ile içerik arasındaki boşluğu azalt */
+  }
+  
+  .custom-dialog-button {
+    margin: 8px 10px;
+    color: white;
+    background-color: #3f51b5;
+    font-weight: bold; /* Kalın font */
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+  
+  .custom-dialog-button:hover {
+    background-color: #303f9f;
+  }
+  

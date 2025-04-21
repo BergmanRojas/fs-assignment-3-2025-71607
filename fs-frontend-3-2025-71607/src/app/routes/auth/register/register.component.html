@@ -1,0 +1,76 @@
+<app-basic-layout>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card border-0">
+          <div class="card-header">
+            <h3 class="mb-0">Register</h3>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="registerForm" (ngSubmit)="register()">
+              <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" id="firstname" formControlName="firstName">
+                <div *ngIf="isFieldInvalid('firstName')" class="error-messages">
+                  <small *ngIf="registerForm.get('firstName')?.errors?.['required']">First name is required.</small>
+                  <small *ngIf="registerForm.get('firstName')?.errors?.['minlength']">Minimum 2 characters required.</small>
+                  <small *ngIf="registerForm.get('firstName')?.errors?.['maxlength']">Maximum 30 characters allowed.</small>
+                  <small *ngIf="registerForm.get('firstName')?.errors?.['pattern']">Only letters are allowed.</small>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" id="lastname" formControlName="lastName">
+                <div *ngIf="isFieldInvalid('lastName')" class="error-messages">
+                  <small *ngIf="registerForm.get('lastName')?.errors?.['required']">Last name is required.</small>
+                  <small *ngIf="registerForm.get('lastName')?.errors?.['minlength']">Minimum 2 characters required.</small>
+                  <small *ngIf="registerForm.get('lastName')?.errors?.['maxlength']">Maximum 30 characters allowed.</small>
+                  <small *ngIf="registerForm.get('lastName')?.errors?.['pattern']">Only letters are allowed.</small>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" class="form-control" id="phone" formControlName="phone">
+                <div *ngIf="isFieldInvalid('phone')" class="error-messages">
+                  <small *ngIf="registerForm.get('phone')?.errors?.['required']">Phone number is required.</small>
+                  <small *ngIf="registerForm.get('phone')?.errors?.['pattern']">Only digits are allowed.</small>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email">
+                <div *ngIf="isFieldInvalid('email')" class="error-messages">
+                  <small *ngIf="registerForm.get('email')?.errors?.['required']">Email address is required.</small>
+                  <small *ngIf="registerForm.get('email')?.errors?.['email']">Please enter a valid email address.</small>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" class="form-control" formControlName="password" aria-describedby="passwordHelpBlock">
+                <div *ngIf="isFieldInvalid('password')" class="error-messages">
+                  <small *ngIf="registerForm.get('password')?.errors?.['required']">Password is required.</small>
+                  <small style="width: 300px;" *ngIf="registerForm.get('password')?.errors?.['pattern']">
+                    Your password must be at least 8 characters long and include an uppercase letter, lowercase letter, number, and special character.
+                  </small>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form>
+
+            <div class="text mt-3">
+              <a routerLink="/login" class="text-primary">Already have an account? Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS (Optional) -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</app-basic-layout>

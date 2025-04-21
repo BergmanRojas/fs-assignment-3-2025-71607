@@ -1,0 +1,46 @@
+<div class="d-flex">
+  <app-admin-sidebar></app-admin-sidebar>
+  <div class="flex-grow-1 p-3">
+    <div class="col-md-12">
+      <app-token></app-token>
+      <div class="card mt-5">
+        <div class="card-header">
+          <h5>Rapor Metni</h5>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="reportForm">
+            <!-- <div class="mb-3">
+              <label for="name">Adı Soyadı</label>
+              <div class="form-group">
+                <input type="text" id="name" class="form-control" formControlName="name" readonly  />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="tcNo">Tc No</label>
+              <div class="form-group">
+                <input type="text" id="tcNo" class="form-control" formControlName="tcNo" readonly  />
+              </div>
+            </div> -->
+            <div class="mb-3">
+              <label for="reportText" class="form-label"></label>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  id="reportText"
+                  rows="20"
+                  type="text"
+                  formControlName="reportText"
+                ></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-fill btn-success" (click)="add()">
+            Rapor Ekle
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

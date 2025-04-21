@@ -1,0 +1,14 @@
+a[href^="mailto"] {
+  text-decoration: none; /* Altı çiziyi kaldır */
+  color: black; /* Rengi değiştir */
+}
+.icon {
+  font-size: 3rem; /* istediğiniz boyutu ayarlayabilirsiniz */
+}
+
+legend {
+  color: #4479b1;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.4em;
+}

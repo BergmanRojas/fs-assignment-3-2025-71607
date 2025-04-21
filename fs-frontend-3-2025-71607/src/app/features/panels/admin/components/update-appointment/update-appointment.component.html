@@ -1,0 +1,97 @@
+<div class="d-flex">
+  <app-admin-sidebar></app-admin-sidebar>
+  <div class="flex-grow-1 p-3">
+    <div class="col-md-12">
+      <app-token></app-token>
+      <div class="card mt-5">
+        <div class="card-header">
+          <h2 class="h2">UPDATE APPOINTMENT</h2>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-11 mx-auto">
+                <div *ngIf="appointment" class="row g-3">
+                  <form
+                    class="row g-3"
+                    [formGroup]="appointmentForm"
+                    (ngSubmit)="updateAppointment()"
+                  >
+                    <div class="col-md-6">
+                      <label for="date" class="form-label">Appointment Date</label>
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="date"
+                        formControlName="date"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="time" class="form-label">Appointment Time</label>
+                      <input
+                        type="time"
+                        class="form-control"
+                        id="time"
+                        formControlName="time"
+                        required
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="patientFirstName" class="form-label">Patient First Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="patientFirstName"
+                        formControlName="patientFirstName"
+                        readonly
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="patientLastName" class="form-label">Patient Last Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="patientLastName"
+                        formControlName="patientLastName"
+                        readonly
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="doctor" class="form-label">Doctor</label>
+                      <select
+                        class="form-control"
+                        id="doctor"
+                        formControlName="doctorId"
+                      >
+                        <option
+                          *ngFor="let doctor of doctors"
+                          [value]="doctor.id"
+                        >
+                          {{ doctor.firstName }} {{ doctor.lastName }}
+                        </option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary w-100">
+                        Update Appointment
+                      </button>
+                    </div>
+                    <div class="col-12" *ngIf="errorMessage">
+                      <div class="alert alert-danger" role="alert">
+                        {{ errorMessage }}
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div *ngIf="!appointment">
+                  <p>Loading...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

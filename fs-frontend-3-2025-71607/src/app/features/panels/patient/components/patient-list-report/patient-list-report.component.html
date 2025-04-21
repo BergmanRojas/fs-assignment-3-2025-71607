@@ -1,0 +1,64 @@
+<div class="d-flex">
+  <app-patient-sidebar></app-patient-sidebar>
+  <div class="flex-grow-1 p-3">
+    <div class="col-md-12">
+      <app-token></app-token>
+      <div class="card mt-5">
+        <div class="card-header">
+          <h2
+            style="
+              color: #1565c0;
+              font-size: 28px;
+              text-align: center;
+              margin-bottom: 19px;
+            "
+          >
+            MY REPORTS
+          </h2>
+        </div>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead class="thead-primary">
+            <tr>
+              <th scope="col" style="width: 20%">Doctor Name</th>
+              <th scope="col" style="width: 20%">Doctor Speciality</th>
+              <th scope="col" style="width: 15%">Appointment Date</th>
+              <th scope="col" style="width: 15%">Appointment Time</th>
+              <th scope="col" style="width: 15%">Report Date</th>
+              <th scope="col" style="width: 20%">Report Details</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let report of reports">
+              <td>
+                {{ report.doctorTitle }} {{ report.doctorFirstName }}
+                {{ report.doctorLastName }}
+              </td>
+
+              <td>{{ report.appointmentDate | date : "dd.MM.yyyy" }}</td>
+              <td>{{ report.appointmentTime }}</td>
+              <td>{{ report.reportDate | date : "dd.MM.yyyy" }}</td>
+              <td>
+                <button
+                  class="btn btn-primary btn-sm"
+                  [routerLink]="['/patient-report-detail', report.id]"
+                >
+                  View Report
+                </button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+          <div class="text-center mt-4">
+            <address>
+              <strong>Address:</strong> 1234 Main Street, Dublin, Ireland<br />
+              <strong>Phone:</strong> +353 1 234 5678<br />
+              <strong>Email:</strong>
+              <a href="mailto:contact@hospital.ie"></a>
+            </address>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

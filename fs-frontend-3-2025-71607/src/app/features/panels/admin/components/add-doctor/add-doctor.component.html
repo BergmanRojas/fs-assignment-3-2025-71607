@@ -1,0 +1,105 @@
+<div class="d-flex">
+  <app-admin-sidebar></app-admin-sidebar>
+  <div class="flex-grow-1 p-3">
+    <div class="col-md-12">
+      <app-token></app-token>
+      <div class="card mt-5">
+        <div class="card-header">
+          <h2 class="h2">ADD DOCTOR</h2>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-11 mx-auto">
+                <form class="row g-3" *ngIf="doctorForm" [formGroup]="doctorForm">
+                  <div class="col-md-6">
+                    <label for="inputFirstName" class="form-label">First Name</label>
+                    <div class="input-group">
+                      <div class="input-group-text">👤</div>
+                      <input type="text" class="form-control" id="inputFirstName" formControlName="firstName" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputLastName" class="form-label">Last Name</label>
+                    <div class="input-group">
+                      <div class="input-group-text">👤</div>
+                      <input type="text" class="form-control" id="inputLastName" formControlName="lastName" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputTitle" class="form-label">Title</label>
+                    <div class="input-group">
+                      <div class="input-group-text">📜</div>
+                      <select class="form-select" id="inputTitle" formControlName="title">
+                        <option value="Prt. Dr.">Prt. Dr.</option>
+                        <option value="Uzm. Dr.">Uzm. Dr.</option>
+                        <option value="Op. Dr.">Op. Dr.</option>
+                        <option value="Yrd. Doç.">Yrd. Doç.</option>
+                        <option value="Doç. Dr.">Doç. Dr.</option>
+                        <option value="Prof. Dr.">Prof. Dr.</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputSchoolName" class="form-label">School Name</label>
+                    <div class="input-group">
+                      <div class="input-group-text">🏫</div>
+                      <input type="text" class="form-control" id="inputSchoolName" formControlName="schoolName" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputDateOfBirth" class="form-label">Date of Birth</label>
+                    <div class="input-group">
+                      <div class="input-group-text">🎂</div>
+                      <input type="date" class="form-control" id="inputDateOfBirth" formControlName="dateOfBirth" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputNationalIdentity" class="form-label">National ID</label>
+                    <div class="input-group">
+                      <div class="input-group-text">🆔</div>
+                      <input type="text" class="form-control" id="inputNationalIdentity" formControlName="nationalIdentity" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputPhone" class="form-label">Phone</label>
+                    <div class="input-group">
+                      <div class="input-group-text">📞</div>
+                      <input type="tel" class="form-control" id="inputPhone" formControlName="phone" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputAddress" class="form-label">Address</label>
+                    <div class="input-group">
+                      <div class="input-group-text">📍</div>
+                      <input type="text" class="form-control" id="inputAddress" formControlName="address" placeholder="1234 Main Street" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <div class="input-group">
+                      <div class="input-group-text">&#64;</div>
+                      <input type="email" class="form-control" id="inputEmail4" formControlName="email" />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputPassword" class="form-label">Password</label>
+                    <div class="input-group">
+                      <div class="input-group-text">🔒</div>
+                      <input type="password" class="form-control" id="inputPassword" formControlName="password" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100" (click)="addDoctor()">
+                      Add Doctor
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

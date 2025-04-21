@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* Arrange page content vertically */
+  min-height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margins */
+}
+
+.d-flex {
+  display: flex;
+  flex-grow: 1; /* Allow content to expand */
+}
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  padding: 15px;
+  border-right: 2px solid #333; /* Right border */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa); /* Gradient background */
+  overflow-y: auto; /* Add scrollbar when needed */
+}
+
+.doctor-info {
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.fs {
+  font-size: 24px; /* Font size */
+  font-weight: bold; /* Bold font */
+  margin-top: 0;
+  margin-bottom: 15px; /* Bottom margin */
+  color: #007bff; /* Primary color */
+  text-align: center; /* Centered text */
+}
+
+.primary-color {
+  color: #007bff; /* Primary color */
+}
+
+.nav-item {
+  margin-bottom: 10px; /* Spacing between menu items */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  font-size: 18px; /* Menu item font size */
+  color: #000000; /* Menu item text color */
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.nav-link:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.content {
+  flex-grow: 1; /* Expand content on the right side */
+  padding: 15px;
+}
+
+.nav-link i,
+.nav-link svg {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+h2 {
+  font-size: 24px;
+  color: #343a40;
+  margin-bottom: 16px;
+}
+
+/* Welcome message style */
+.welcome-message {
+  font-size: 18px;
+  color: #353c42; /* Distinctive color for welcome message */
+  font-weight: bold;
+  margin: 3px 0;
+  text-align: center;
+}
+
+/* Doctor's name style */
+.doctor-name {
+  font-size: 25px;
+  color: #0056b3; /* Primary color */
+  font-weight: bold;
+  text-transform: uppercase; /* All uppercase letters */
+  margin: 0;
+  text-align: center;
+}
+
+.loading-message {
+  font-size: 16px;
+  color: #adb5bd;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}

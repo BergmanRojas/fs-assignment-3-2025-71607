@@ -1,0 +1,91 @@
+<app-basic-layout>
+  <div class="mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-12 mb-3 mb-lg-0">
+          <app-slider></app-slider>
+        </div>
+        <div class="col-lg-4 col-md-12 d-flex flex-column justify-content-center">
+          <div class="icon-boxes">
+            <a class="icon-box text-center" (click)="checkUserForAppointment()">
+              <div>
+                <fa-icon [icon]="icon" size="2x" style="color: #3b5ec2"></fa-icon>
+                <h4>Online Appointment</h4>
+              </div>
+            </a>
+            <a routerLink="/doctors" class="icon-box text-center">
+              <div>
+                <fa-icon [icon]="icon2" size="2x" style="color: #3b5ec2"></fa-icon>
+                <h4>Our Doctors</h4>
+              </div>
+            </a>
+            <a routerLink="/faq" class="icon-box text-center">
+              <div>
+                <fa-icon [icon]="icon3" size="2x" style="color: #3b5ec2"></fa-icon>
+                <h4>Frequently Asked Questions</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-5"></div>
+
+    <div class="container mt-5">
+      <div class="row mt-5">
+        <div class="col-md-8">
+          <h2>Why Choose P5 Hospitals?</h2>
+          <p>
+            At P5 Hospitals, we stand out with our commitment to excellence and patient-centered approach in healthcare.
+            Our team of expert doctors, advanced medical equipment, and comfortable hospital environment ensure the best possible care.
+            We prioritize patient satisfaction by offering personalized treatment plans and comprehensive health solutions.
+            With 24 years of experience and a constantly evolving vision, we provide high-quality, reliable healthcare
+            in line with both local and international standards. P5 Hospitals is always by your side to protect your health
+            and improve your quality of life.
+          </p>
+          <div class="d-flex justify-content-around">
+            <div class="text-center">
+              <img src="assets/images/homepage/vision-icon.png" alt="Vision for the Future" class="img-fluid" />
+              <p>Vision for the Future</p>
+            </div>
+            <div class="text-center">
+              <img src="assets/images/homepage/patient-experience-icon.png" alt="Patient Experience" class="img-fluid" />
+              <p>Patient Experience</p>
+            </div>
+            <div class="text-center">
+              <img src="assets/images/homepage/quality-icon.png" alt="Excellence in Quality" class="img-fluid" />
+              <p>Excellence in Quality</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="assets/images/homepage/24-years.jpeg" class="img-fluid" alt="P5 Hospitals 24 Years of Experience" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container step-section">
+      <div class="row d-flex justify-content-center">
+        <div class="banner-aside align-items-center d-md-flex col-lg-12 col-md-8 col-sm-8 col-10">
+          <figure class="col-12 col-lg-5 mr-lg-5 mr-md-3">
+            <img src="assets/images/homepage/your-health-safe.jpg" class="img-aside" alt="Your Health in Safe Hands" width="470" height="447" />
+          </figure>
+          <div class="banner-content">
+            <h3 class="banner-title">Your Health is Our Priority</h3>
+            <p>
+              With the slogan "Your Health in Safe Hands", P5 Hospitals is dedicated to offering you the best possible care.
+              With 24 years of experience, we continue to be a trusted name in the healthcare sector.
+              We place patient satisfaction and safety above all else, delivering world-class services with
+              advanced medical equipment and expert staff.
+              <br />
+              Our goal is to ensure you feel safe and valued on every visit, supporting you on your journey to better health.
+              P5 Hospitals is your trusted partner in healthcare.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-live-support-icon></app-live-support-icon>
+</app-basic-layout>

@@ -1,0 +1,17 @@
+<app-basic-layout>
+  <div class="row">
+    <h2 class="title">Our Doctors</h2>
+
+    <div *ngFor="let doctor of doctors" class="col-md-4">
+      <div class="card border-primary mb-4">
+        <img src="https://via.placeholder.com/180" class="card-img-top" alt="Doctor Image" style="max-height: 250px; max-width: 100%;" />
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-center">{{ doctor.firstName }} {{ doctor.lastName }}</li>
+            <li class="list-group-item text-center">Dr. {{ doctor.title }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-basic-layout>

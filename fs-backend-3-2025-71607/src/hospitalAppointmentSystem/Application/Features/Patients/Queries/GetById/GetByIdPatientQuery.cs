@@ -1,0 +1,51 @@
+using Application.Features.Patients.Rules;
+using Application.Services.Repositories;
+using AutoMapper;
+using Domain.Entities;
+using NArchitecture.Core.Application.Pipelines.Authorization;
+using MediatR;
+using Application.Services.Encryptions;
+using System.Numerics;
+
+namespace Application.Features.Patients.Queries.GetById;
+
+public class GetByIdPatientQuery : IRequest<GetByIdPatientResponse>
+{
+    public Guid Id { get; set; }
+
+
+    public class GetByIdPatientQueryHandler : IRequestHandler<GetByIdPatientQuery, GetByIdPatientResponse>
+    {
+        private readonly IMapper _mapper;
+        private readonly IPatientRepository _patientRepository;
+        private readonly PatientBusinessRules _patientBusinessRules;
+
+        public GetByIdPatientQueryHandler(IMapper mapper, IPatientRepository patientRepository, PatientBusinessRules patientBusinessRules)
+        {
+            _mapper = mapper;
+            _patientRepository = patientRepository;
+            _patientBusinessRules = patientBusinessRules;
+        }
+
+        public async Task<GetByIdPatientResponse> Handle(GetByIdPatientQuery request, CancellationToken cancellationToken)
+        {
+            Patient? patient = await _patientRepository.GetAsync(predicate: p => p.Id == request.Id, cancellationToken: cancellationToken);
+            await _patientBusinessRules.PatientShouldExistWhenSelected(patient);
+
+            //sinem encryptions �ifrelenmi� veriyi okuma.decrypt �ifreyi ��zer
+
+            patient.FirstName = CryptoHelper.Decrypt(patient.FirstName);
+            patient.LastName = CryptoHelper.Decrypt(patient.LastName);
+            patient.NationalIdentity = CryptoHelper.Decrypt(patient.NationalIdentity);
+            patient.Phone = CryptoHelper.Decrypt(patient.Phone);
+            patient.Address = CryptoHelper.Decrypt(patient.Address);
+            patient.Email = CryptoHelper.Decrypt(patient.Email);
+
+            // yazd���m yer bitti
+
+
+            GetByIdPatientResponse response = _mapper.Map<GetByIdPatientResponse>(patient);
+            return response;
+        }
+    }
+}

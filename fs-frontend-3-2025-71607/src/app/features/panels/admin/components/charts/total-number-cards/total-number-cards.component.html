@@ -1,0 +1,13 @@
+<div class="d-flex">
+  <div class="flex-grow-1 p-3">
+    <div class="card mb-3 border border-2 border-dark" style="width: 100%;">
+      <div class="card-body">
+
+        <ngx-charts-number-card [view]="view" [cardColor]="cardColor" [scheme]="colorScheme" [results]="single"
+          (select)="onSelect($event)">
+        </ngx-charts-number-card>
+      </div>
+    </div>
+
+  </div>
+</div>

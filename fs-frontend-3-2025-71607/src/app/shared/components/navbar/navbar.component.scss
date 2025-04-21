@@ -1,0 +1,85 @@
+/* Navbar background and text styling */
+.navbar {
+  background-color: #0066ae !important; /* Navbar arkaplan rengini ayarlar */
+  padding: 10px 0; /* Navbar yüksekliğini küçültmek için padding'i ayarlar */
+  z-index: 2000;
+  position:absolute;
+  //position: fixed;
+  top: 0; /* Navbar'ın sayfanın en üstüne yerleşmesini sağlar */
+  left: 0; /* Navbar'ın sol kenarını sayfanın sol kenarına yapıştırır */
+  right: 0; /* Navbar'ın sağ kenarını sayfanın sağ kenarına yapıştırır */
+  width: 100%; /* Navbar'ın genişliğini %100 yapar */
+}
+
+.navbar .nav-link {
+  color: white !important; /* Navbar linklerinin rengini ayarlar */
+  font-size: 1.2rem; /* Link font boyutunu biraz küçültür */
+  margin-right: 15px; /* Sağ kenara boşluk bırakır */
+  padding: 5px 0; /* Linklerin iç boşluklarını ayarlar */
+}
+
+.navbar .nav-link:hover {
+  color: #cccccc !important; /* Link hover durumunda rengini ayarlar */
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-toggler-icon {
+  color: white !important; /* Navbar marka metni ve toggler ikonunun rengini ayarlar */
+}
+
+.navbar .form-control {
+  font-family: 'Manrope', sans-serif; /* Form kontrol fontunu ayarlar */
+  font-size: 14px; /* Form kontrol font boyutunu ayarlar */
+  height: 30px; /* Input yüksekliğini küçültür */
+}
+
+.navbar .btn-success {
+  background-color: #0056a3; /* Başarı butonunun arkaplan rengini ayarlar */
+  border-color: white; /* Buton kenarlık rengini ayarlar */
+  font-family: 'Manrope', sans-serif; /* Buton fontunu ayarlar */
+  font-size: 14px; /* Buton font boyutunu ayarlar */
+  padding: 5px 10px; /* Buton iç boşluklarını ayarlar */
+  margin-right: 14px; /* Sağ kenara boşluk bırakır */
+}
+
+.navbar .btn-success:hover {
+  background-color: #ecf0f3; /* Hover durumunda başarı butonunun arkaplan rengini ayarlar */
+  border-color: #0056a3; /* Hover durumunda buton kenarlık rengini ayarlar */
+  color: #0056a3; /* Hover durumunda buton rengini ayarlar */
+}
+
+#logo {
+  max-width: 140px; /* Logo maksimum genişliğini ayarlar */
+  max-height: 80px; /* Logo maksimum yüksekliğini ayarlar */
+  width: auto; /* Genişliği otomatik olarak ayarlar */
+  height: auto; /* Yüksekliği otomatik olarak ayarlar */
+  display: inline-block; /* Diğer içeriklerle yan yana yerleştirir */
+  vertical-align: top; /* Dikey hizalama, üst kenara hizalar */
+  margin-right: 10px; /* Sağ kenara boşluk bırakır */
+  border: 1px solid #ccc; /* Kenarlık rengini ayarlar */
+  border-radius: 5px; /* Kenarlık köşelerini yuvarlar */
+  margin-right: 40px; /* Sağ kenara ek boşluk bırakır */
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  overflow: visible; /* Menünün sınırlarını aşmasına izin ver */
+  z-index: 5000; /* Dropdown menünün z-index değeri */
+
+}
+
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+
+}
+
+
+ul li a:hover{
+   background-color:#7fb2e8;
+}
+
+#logo{
+  cursor: pointer;
+}

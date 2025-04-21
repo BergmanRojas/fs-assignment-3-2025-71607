@@ -1,0 +1,31 @@
+.title {
+    margin-top: 20px;
+    text-align: center;
+    color: #4479b1;
+    font-weight: bold;
+    font-size: 2.3em;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .title:after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #4479b1;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+
+  .form-control {
+    max-width: 150px;
+    margin-bottom: 15px;
+  }
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+
+  

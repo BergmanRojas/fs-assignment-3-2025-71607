@@ -1,0 +1,9 @@
+<!-- live-support-icon.component.html -->
+<div class="live-support-icon" (click)="toggleChat()">
+    <i class="bi bi-headphones"></i>
+  </div>
+  
+  <div *ngIf="isOpen" class="live-support-window">
+    <app-live-support></app-live-support> <!-- Canlı destek bileşeni burada gösterilecek -->
+  </div>
+  

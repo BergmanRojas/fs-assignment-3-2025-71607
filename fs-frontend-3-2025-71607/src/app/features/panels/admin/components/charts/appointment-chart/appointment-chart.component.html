@@ -1,0 +1,13 @@
+<div class="d-flex">
+  <div class="flex-grow-1 p-3">
+    <div class="card mb-3 border border-2 border-dark" style="width: 100%;">
+      <div class="card-body">
+        <ngx-charts-bar-vertical [view]="view" [scheme]="colorScheme" [results]="single" [gradient]="gradient"
+          [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" [legendTitle]="legendTitle"
+          (select)="onSelect($event)">
+        </ngx-charts-bar-vertical>
+      </div>
+    </div>
+  </div>
+</div>

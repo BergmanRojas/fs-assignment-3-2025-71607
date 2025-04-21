@@ -1,0 +1,12 @@
+<div class="live-support">
+  <h3>{{ welcomeMessage }}</h3>
+  <i *ngIf="history.length > 0" class="bi bi-skip-backward-fill blue-icon" (click)="goBack()" style="cursor: pointer;"></i>
+  <ul>
+    <li *ngFor="let message of currentMessages" (click)="selectMessage(message)">
+      {{ message.text }}
+      <div *ngIf="selectedMessageId === message.id && message.response" class="response">
+        <p>{{ message.response }}</p>
+      </div>
+    </li>
+  </ul>
+</div>

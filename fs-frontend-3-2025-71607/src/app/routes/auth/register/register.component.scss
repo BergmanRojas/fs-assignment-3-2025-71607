@@ -1,0 +1,79 @@
+/* Custom CSS */
+body {
+  background-color: #ffffff;
+}
+
+.card {
+  border-color: #0b3457;
+  border-bottom: 5px;
+ box-shadow: 0 0 10px #0b3457;
+ max-width: 500px;
+ margin: 0 auto; /* Kartı yatayda ortala */
+}
+
+.card-header {
+  text-align: center;
+  //  font-family: "Lora";
+  color: #0056a3;
+}
+
+.btn-primary {
+  background-color: #0056a3;
+  border-color: #0056a3;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Butonu ortala */
+.btn-primary
+{
+  margin-top: 20px;
+
+  width: 100px;
+  text-align: center;
+}
+
+h2{
+  margin-top: 10px;
+  color: #0056a3;
+  font-family: "Lora";
+}
+
+label{
+color: #0056a3;
+margin-bottom: 15px;
+
+}
+
+input{
+  margin-bottom: 12px;
+  border-color: #0056a3;
+
+}
+
+a{
+  color: #0b3457
+}
+
+small{
+  color: red;
+  margin-top: 10px;
+}
+
+.error-messages {
+  margin-top: 0.5em; /* Yukarıdan boşluk bırak */
+  padding: 0;
+}
+
+.error-messages small {
+  font-size: 13px;
+  color: #fb3b2e !important;
+  text-align: justify; /* İki tarafa da eşit şekilde hizala */
+  display: block;
+  margin: 0.5em 0; /* Yukarıdan ve aşağıdan boşluk bırak */
+  padding: 0;
+  width: 100%; /* Tam genişlik */
+}

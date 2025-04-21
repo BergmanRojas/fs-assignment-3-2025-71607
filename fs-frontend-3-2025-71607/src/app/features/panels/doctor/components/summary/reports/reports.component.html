@@ -1,0 +1,64 @@
+<div class="d-flex">
+
+  <div class="flex-grow-1 p-3">
+    <div class="card">
+      <div class="card-header">
+        <h2
+          style="
+            color: #1565c0;
+            font-size: 28px;
+            text-align: center;
+            margin: 0;
+          "
+        >
+          HASTA RAPORLARI
+        </h2>
+      </div>
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+          <div class="input-group mr-3">
+            <span class="input-group-text">
+              <i class="bi bi-search"></i>
+            </span>
+            <input
+              type="text"
+              [(ngModel)]="filterText"
+              class="form-control"
+              id="filterText"
+              placeholder="Hasta kimlik numarası"
+            />
+          </div>
+        </div>
+        <table class="table table-striped">
+          <thead class="thead-primary">
+            <tr>
+              <!-- <th scope="col" style="width: 15%">Hasta Adı Soyadı</th> -->
+              <th scope="col" style="width: 15%">Tc Kimlik No</th>
+              <th scope="col" style="width: 15%">Randevu Tarihi</th>
+              <th scope="col" style="width: 15%">Randevu Saati</th>
+              <!-- <th scope="col" style="width: 15%">Rapor Tarihi</th> -->
+              <th scope="col" style="width: 25%">Rapor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let report of reports |filterReportIdentity:filterText">
+              <!-- <td>{{ report.patientFirstName }} {{ report.patientLastName }}</td> -->
+              <td>{{ report.patientIdentity }}</td>
+              <td>{{ report.appointmentDate | date: 'dd.MM.yyyy' }}</td>
+              <td>{{ report.appointmentTime }}</td>
+              <!-- <td>{{ report.reportDate | date: 'dd.MM.yyyy' }}</td> -->
+              <td>
+                <button
+                  class="btn btn-primary btn-sm"
+                  (click)="goToReport(report.id)"
+                >
+                  Raporu Görüntüle
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

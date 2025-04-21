@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  padding: 15px;
+  border-right: 2px solid #333; /* Sağ kenarlık */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa); /* Arka plan gradyan */
+}
+
+.admin-info {
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.welcome-message {
+  font-size: 18px;
+  color: #353c42; /* Hoş geldiniz mesajı için farklı bir renk */
+  font-weight: bold;
+  margin: 3px 0;
+  text-align: center;
+}
+
+.admin-name {
+  font-size: 25px;
+  color: #0056b3; /* Primary renk */
+  font-weight: bold;
+  text-transform: uppercase; /* Tüm harfler büyük */
+  margin: 0;
+  text-align: center;
+}
+
+.nav-item {
+  margin-bottom: 10px; /* Menü öğeleri arasında boşluk */
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  font-size: 18px; /* Menü öğe yazı tipi boyutu */
+  color: #000000; /* Menü öğe yazı rengi */
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.nav-link:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.nav-link i,
+.nav-link svg {
+  margin-right: 10px; /* İkon ile metin arasındaki boşluk */
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}

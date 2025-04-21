@@ -1,0 +1,56 @@
+/* Custom CSS */
+body {
+    background-color: #ffffff;
+  }
+  
+  .card {
+    border-color: #0b3457;
+    border-bottom: 5px;
+   box-shadow: 0 0 10px #0b3457;
+   max-width: 500px;
+   margin: 0 auto; /* Kartı yatayda ortala */
+  }
+  
+  .card-header {
+    text-align: center;
+    //  font-family: "Lora";
+    color: #0056a3;
+  }
+   
+  
+  h2{
+    margin-top: 10px;
+    color: #0056a3;
+    font-family: "Lora";
+  }
+  
+  label{
+  color: #0056a3;
+  margin-bottom: 15px;
+  
+  }
+  
+  
+  a{
+    color: #0b3457
+  }
+
+  /* verify-email.component.scss */
+
+button {
+  background-color: #007bff; /* Mavi renk */
+  color: #fff; /* Beyaz metin */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  margin: 0 auto; /* Ortalama için */
+}
+
+button:hover {
+  background-color: #0056b3; /* Hover durumunda daha koyu mavi */
+}
+
+  

@@ -1,0 +1,18 @@
+.card-body {
+    overflow-y: auto;
+    /* Add overflow-y: auto for vertical scrolling */
+    max-height: 350px;
+    /* Set a maximum height for the scrollable area (optional) */
+
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    /* Ensure table width is set appropriately */
+}
+
+tr {
+    text-align: center;
+    /* Center table row content */
+}

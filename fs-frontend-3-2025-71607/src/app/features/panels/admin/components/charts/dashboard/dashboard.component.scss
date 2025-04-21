@@ -1,0 +1,32 @@
+.d-flex {
+  display: flex;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; // Space between rows
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.column {
+  flex: 1;
+  max-width: 45%; // Maximum width per column
+}
+
+// Chart component sizing
+ngx-charts-pie-chart,
+app-appointment-chart,
+app-doctor-chart,
+app-title-chart,
+app-total-summary-cards {
+  width: 100%;
+  max-width: 250px;
+  height: 200px;
+}

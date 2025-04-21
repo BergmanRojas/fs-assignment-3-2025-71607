@@ -1,0 +1,68 @@
+
+/* Google Fonts kullanımı için */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+.about-container {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: transparent; /* Kart arka planını şeffaf yapma */
+  border-radius: 10px;
+  box-shadow: none; /* Kartın gölgesini kaldırma */
+}
+
+
+
+.about-container h2 {
+  font-family: 'Segoe UI', serif;  /* Başlıklar için Lora fontu kullanımı */
+  // font-family: 'Lora', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #4479b1;
+  border-bottom: 2px solid #4479b1;
+  padding-bottom: 10px;
+}
+
+.about-container p {
+ /* Paragraflar için Roboto fontu kullanımı */
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.about-container ul {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  padding-left: 20px;
+}
+
+.img-fluid {
+  max-width: 100%; /* Resmin genişliğini ayarla */
+  height: auto;/* Yüksekliği otomatik olarak ayarla */
+  aspect-ratio: 16 / 9; /* Resmin en-boy oranını ayarla (örneğin, 16:9) */
+  border-radius: 10px; /* Köşeleri yuvarlak hale getirme */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Gölge ekleme */
+
+
+}
+
+.row.align-items-center {
+  align-items: center;
+}
+
+.row.mb-5 > [class*='col-'] {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .image-section img {
+    margin-bottom: 20px;
+  }
+}

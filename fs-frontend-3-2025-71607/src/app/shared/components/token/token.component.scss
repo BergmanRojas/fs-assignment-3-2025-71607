@@ -1,0 +1,15 @@
+.token-expiration {
+  margin-bottom: 5px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #0056a3; /* Arka plan rengi */
+  color: #fff; /* Yazı rengi */
+  width: 70px;
+  position: absolute;
+  top: 10px; /* Yukarıdan 10 piksel mesafe */
+  right: 10px; /* Sağdan 10 piksel mesafe */
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: flex-end;
+}

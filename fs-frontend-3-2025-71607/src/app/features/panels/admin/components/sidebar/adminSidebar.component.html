@@ -1,0 +1,76 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-dark bg-white sidebar" style="width: 280px;">
+  <div class="text-center admin-info">
+    <p *ngIf="adminName" class="welcome-message">Welcome,</p>
+    <p *ngIf="adminName" class="admin-name">{{ adminName }}</p>
+  </div>
+  <hr />
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+        <i class="bi bi-house-heart"></i>
+        Home
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/admin-list-doctor" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+        <i class="bi bi-person-lines-fill"></i>
+        Doctor Management
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/admin-patient" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+        <i class="bi bi-people-fill"></i>
+        Patient Management
+      </a>
+    </li>
+    <li class="nav-item">
+      <a data-bs-toggle="collapse" href="#appointmentCollapse" role="button" aria-expanded="false"
+         aria-controls="appointmentCollapse" class="nav-link">
+        <i class="bi bi-calendar3-week"></i>
+        Appointment Management
+      </a>
+      <div class="collapse" id="appointmentCollapse">
+        <ul class="nav flex-column ms-3">
+          <li class="nav-item">
+            <a routerLink="/past-appointments" routerLinkActive="active" class="nav-link">
+              <i class="bi bi-arrow-left-square"></i>
+              Past Appointments
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="/upcoming-appointments" routerLinkActive="active" class="nav-link">
+              <i class="bi bi-arrow-right-square"></i>
+              Upcoming Appointments
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a routerLink="/admin-reports" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+        <i class="bi bi-journal"></i>
+        Report Management
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/admin-charts" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+        <i class="bi bi-bar-chart"></i>
+        Statistics
+      </a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/admin-profile" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
+        <i class="bi bi-gear-fill"></i>
+        My Profile
+      </a>
+    </li>
+    <li class="nav-item">
+      <a (click)="logout()" class="nav-link" style="cursor: pointer;">
+        <i class="bi bi-box-arrow-left"></i>
+        Logout
+      </a>
+    </li>
+  </ul>
+</div>
+

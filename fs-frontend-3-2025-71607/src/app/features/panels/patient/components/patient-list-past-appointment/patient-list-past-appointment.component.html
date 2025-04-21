@@ -1,0 +1,63 @@
+<div class="d-flex">
+  <app-patient-sidebar></app-patient-sidebar>
+  <div class="flex-grow-1 p-3">
+    <div class="col-md-12">
+      <app-token></app-token>
+      <div class="card mt-5">
+        <div class="flex-grow-1 p-3">
+          <div class="content">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <h2
+                    style="
+                      color: #1565c0;
+                      font-size: 28px;
+                      text-align: center;
+                      margin-bottom: 19px;
+                    "
+                  >
+                    PAST APPOINTMENTS
+                  </h2>
+                </div>
+                <div class="card-body">
+                  <table class="table table-striped">
+                    <thead class="thead-primary">
+                    <tr>
+                      <th scope="col" style="width: 20%">Doctor Name</th>
+                      <th scope="col" style="width: 15%">Appointment Date</th>
+                      <th scope="col" style="width: 15%">Appointment Time</th>
+                      <th scope="col" style="width: 15%">Status</th>
+                      <th scope="col" style="width: 20%">Report</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let appointment of appointments">
+                      <td>
+                        {{ appointment.doctorTitle }}
+                        {{ appointment.doctorFirstName }}
+                        {{ appointment.doctorLastName }}
+                      </td>
+                      <td>{{ appointment.date | date : "dd.MM.yyyy" }}</td>
+                      <td>{{ appointment.time }}</td>
+                      <td>Completed</td>
+                      <td>
+                        <button
+                          class="btn btn-primary btn-sm"
+                          (click)="viewReport(appointment.id)"
+                        >
+                          View Report
+                        </button>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

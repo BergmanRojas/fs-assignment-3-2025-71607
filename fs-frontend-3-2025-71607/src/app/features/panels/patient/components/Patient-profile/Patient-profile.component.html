@@ -1,0 +1,183 @@
+<div class="d-flex">
+  <app-patient-sidebar></app-patient-sidebar>
+  <div class="flex-grow-1 p-3">
+    <div class="col-md-12">
+      <app-token></app-token>
+      <div class="card mt-5">
+        <div class="card-header">
+          <h2 class="h2">PROFİL BİLGİLERİM</h2>
+        </div>
+        <div class="card-body">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-md-11 mx-auto">
+                <form
+                  class="row g-3"
+                  *ngIf="PatientForm"
+                  [formGroup]="PatientForm"
+                >
+                  <div class="col-md-6">
+                    <label for="inputFirstName" class="form-label">Ad</label>
+                    <div class="input-group">
+                      <div class="input-group-text">👤</div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputFirstName"
+                        formControlName="firstName"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputLastName" class="form-label">Soyad</label>
+                    <div class="input-group">
+                      <div class="input-group-text">👤</div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputLastName"
+                        formControlName="lastName"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputDateOfBirth" class="form-label"
+                      >Doğum Tarihi</label
+                    >
+                    <div class="input-group">
+                      <div class="input-group-text">🎂</div>
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="inputDateOfBirth"
+                        formControlName="dateOfBirth"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputAge" class="form-label">Yaş</label>
+                    <div class="input-group">
+                      <div class="input-group-text">🎂</div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputAge"
+                        formControlName="age"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputHeight" class="form-label">Boy</label>
+                    <div class="input-group">
+                      <div class="input-group-text">📏</div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputHeight"
+                        formControlName="height"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputWeight" class="form-label">Kilo</label>
+                    <div class="input-group">
+                      <div class="input-group-text">⚖️</div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputWeight"
+                        formControlName="weight"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputBloodGroup" class="form-label"
+                      >Kan Grubu</label
+                    >
+                    <div class="input-group">
+                      <div class="input-group-text">🅰️</div>
+                      <select
+                        class="form-select"
+                        id="inputBloodGroup"
+                        formControlName="bloodGroup"
+                      >
+                        <option value="A Rh+">A Rh+</option>
+                        <option value="A Rh-">A Rh-</option>
+                        <option value="B Rh+">B Rh+</option>
+                        <option value="B Rh-">B Rh-</option>
+                        <option value="AB Rh+">AB Rh+</option>
+                        <option value="AB Rh-">AB Rh-</option>
+                        <option value="0 Rh+">0 Rh+</option>
+                        <option value="0 Rh-">0 Rh-</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputNationalIdentity" class="form-label"
+                      >Kimlik Numarası</label
+                    >
+                    <div class="input-group">
+                      <div class="input-group-text">🆔</div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputNationalIdentity"
+                        formControlName="nationalIdentity"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputPhone" class="form-label">Telefon</label>
+                    <div class="input-group">
+                      <div class="input-group-text">📞</div>
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="inputPhone"
+                        formControlName="phone"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputAddress" class="form-label">Adres</label>
+                    <div class="input-group">
+                      <div class="input-group-text">📍</div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputAddress"
+                        formControlName="address"
+                        placeholder="1234 Ana Cadde"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <div class="input-group">
+                      <div class="input-group-text">&#64;</div>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="inputEmail4"
+                        formControlName="email"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button
+                      type="submit"
+                      class="btn btn-primary w-100"
+                      (click)="updatePatient()"
+                    >
+                      Bilgilerimi Güncelle
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

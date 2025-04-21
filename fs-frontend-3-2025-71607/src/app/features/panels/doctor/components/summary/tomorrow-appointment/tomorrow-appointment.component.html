@@ -1,0 +1,44 @@
+<div class="d-flex">
+
+  <div class="flex-grow-1 p-3">
+    <div class="card">
+      <div class="card-header">
+        <h2 style="color: #1565c0; font-size: 28px; text-align: center; margin: 0;">YARINKİ RANDEVULARIM</h2>
+      </div>
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+          <div class="input-group mr-3">
+            <span class="input-group-text">
+              <i class="bi bi-search"></i>
+            </span>
+            <input
+              type="text"
+              [(ngModel)]="filterText"
+              class="form-control"
+              id="filterText"
+              placeholder="Hasta kimlik numarası"
+            />
+          </div>
+        </div>
+        <table class="table table-striped">
+          <thead class="thead-primary">
+            <tr>
+              <!-- <th scope="col" style="width: 20%;">Hasta Adı Soyadı</th> -->
+              <th scope="col" style="width: 15%;">Hasta Kimlik Numarası</th>
+              <th scope="col" style="width: 15%;">Randevu Tarihi</th>
+              <th scope="col" style="width: 15%;">Randevu Saati</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let appointment of appointments | filterAppointmentIdentity:filterText">
+              <!-- <td>{{ appointment.patientFirstName }} {{ appointment.patientLastName }}</td> -->
+              <td>{{ appointment.patientNationalIdentity }}</td>
+              <td>{{ appointment.date | date:'dd.MM.yyyy' }}</td>
+              <td>{{ appointment.time }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

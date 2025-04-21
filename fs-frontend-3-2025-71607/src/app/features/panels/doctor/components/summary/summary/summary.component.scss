@@ -1,0 +1,34 @@
+.d-flex {
+  display: flex;
+  flex-direction: row;
+  height: 100%; /* Sayfanın tamamını kaplasın */
+}
+
+.sidebar {
+  flex: 0 0 300px; /* Sabit genişlik */
+  background-color: #f0f0f0; /* Sidebar arka plan rengi */
+  padding: 15px; /* Kenar boşluğu */
+  overflow-y: auto; /* Gerektiğinde scrollbar ekle */
+}
+
+.content {
+  flex: 1; /* Sağ taraftaki içeriği esnek yap */
+  overflow-y: auto; /* Gerektiğinde scrollbar ekle */
+}
+
+.container {
+  padding: 20px; /* İçerik içindeki boşluk ayarlaması */
+}
+
+.row {
+  margin-bottom: 20px; /* Satırlar arası boşluk */
+}
+
+.col-md-6 {
+  flex: 0 0 50%; /* Yarısında iki sütun */
+  max-width: 50%;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem; /* İstediğiniz boşluk ayarlaması */
+}
